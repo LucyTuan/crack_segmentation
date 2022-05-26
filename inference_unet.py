@@ -96,7 +96,7 @@ if __name__ == '__main__':
         os.makedirs(args.out_pred_dir, exist_ok=True)
         for path in Path(args.out_pred_dir).glob('*.*'):
             os.remove(str(path))
-
+    args.model_type='vgg16'
     if args.model_type == 'vgg16':
         model = load_unet_vgg16(args.model_path)
     elif args.model_type  == 'resnet101':
