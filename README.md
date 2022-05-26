@@ -53,20 +53,18 @@ The splitting is stratified so that the proportion of each dataset in the train 
 ***
 # Dependencies
 ```python
-conda create --name crack
-conda install -c anaconda pytorch-gpu 
-conda install -c conda-forge opencv 
-conda install matplotlib scipy numpy tqdm pillow
+conda create --name crack python=3.8
+pip install opencv 
+pip install matplotlib scipy numpy tqdm pillow
 ```
 
 ***
 # Inference
-- download the pre-trained model [unet_vgg16](https://drive.google.com/open?id=1wA2eAsyFZArG3Zc9OaKvnBuxSAPyDl08) or 
-[unet_resnet_101]().
+- download the pre-trained model [unet_vgg16](https://drive.google.com/open?id=1wA2eAsyFZArG3Zc9OaKvnBuxSAPyDl08).
 - put the downloaded model under the folder ./models
 - run the code
 ```pythonstub
-python inference_unet.py  -in_dir ./test_images -model_path ./models/model_unet_resnet_101_best.pt -out_dir ./test_result
+python inference_unet.py  -img_dir ./test_imgs -model_path ./models/model_unet_vgg_16_best.pt -out_pred_dir ./test_results
 ```
 
 ***
@@ -92,13 +90,7 @@ These images could be found in the folder ./test_imgs in the same repository
 
 I am very welcome to further idea from you. please drop me an email at khanhhh89@gmail.com if you think of other cases
 
-# Training
-- step 1. download the dataset from [the link](https://drive.google.com/open?id=1xrOqv0-3uMHjZyEUrerOYiYXW_E8SUMP)
-- step 2. run the training code
-- step 3: 
-```python 
-python train_unet.py -data_dir PATH_TO_THE_DATASET_FOLDER -model_dir PATH_TO_MODEL_DIRECTORY -model_type resnet_101
-```
+
 
 # Result
 The best result is achieved by UNet_Resnet_101 with IoU = and Dice = 
