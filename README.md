@@ -54,7 +54,7 @@ The splitting is stratified so that the proportion of each dataset in the train 
 # Dependencies
 ```python
 conda create --name crack python=3.8
-pip install opencv 
+pip install opencv-python 
 pip install matplotlib scipy numpy tqdm pillow
 ```
 
