@@ -6,6 +6,7 @@ My approach is based on the UNet network with transfer learning on the two popul
 The result shows that a large crack segmentation dataset helps improve the performance of the model in diverse cases that 
 could happen in practice.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LucyTuan/crack_segmentation/blob/master/colab.ipynb)
 # Contents
  - [Inference Result Preview](#Inference-Result-Preview)
  - [Overview](#Overview)
